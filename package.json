@@ -8,7 +8,10 @@
     "start": "webpack-dev-server --open --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "config-lite": "^2.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
