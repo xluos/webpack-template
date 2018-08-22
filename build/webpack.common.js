@@ -20,7 +20,7 @@ module.exports = {
     })
   ],
   output: {
-    filename: '[name].js',
+    filename: 'js/[name].[hash].js',
     path: path.resolve(__dirname, '../dist')
   },
   module: {
@@ -41,17 +41,6 @@ module.exports = {
       //   use: 'html-loader'
       // },
 
-      {
-        // 匹配 css 文件
-        test: /\.css$/,
-
-        /*
-        先使用 css-loader 处理，返回的结果交给 style-loader 处理。
-        css-loader 将 css 内容存为 js 字符串，并且会把 background, @font-face 等引用的图片，
-        字体文件交给指定的 loader 打包，类似上面的 html-loader, 用什么 loader 同样在 loaders 对象中定义，等会下面就会看到。
-        */
-        use: ['style-loader', 'css-loader']
-      },
       {
         /*
         使用 babel 编译 ES6 / ES7 / ES8 为 ES5 代码
